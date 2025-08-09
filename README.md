@@ -6,19 +6,18 @@
 - Доступ к интернету для скачивания образов и зависимостей
 - Переменная окружения `ACCESS_TOKEN` (получить на https://hackattic.com/challenges/backup_restore/)
 
-## Запуск на Windows и Linux
+## Запуск на Windows или Linux
 
-1. Склонируйте или скачайте проект.
+1. **Склонируйте или скачайте проект**  
    Перейдите в директорию с файлами `Dockerfile` и `script.sh`.
 
-2. Постройте Docker-образ.
-   Откройте терминал (PowerShell для Windows, bash для Linux) и выполните команду:
+2. **Постройте Docker-образ**  
+   Откройте терминал (PowerShell для Windows, bash для Linux) и выполните команду:  
    `docker build -f Dockerfile -t backup_restore .`
 
-3. Запустите контейнер с передачей ACCESS_TOKEN.
-   Замените {TOKEN} на ваш реальный токен:
+3. **Запустите контейнер с передачей ACCESS_TOKEN**
+   Замените {TOKEN} на ваш реальный токен:  
    `docker run --rm --name=backup_restore_ubuntu --env ACCESS_TOKEN="{TOKEN}" backup_restore`
-
 
 ## Примечания
 
